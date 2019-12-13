@@ -34,17 +34,26 @@ Follow these steps for completing your project.
 
 Commit your code regularly and use descriptive messages. This helps both you (in case you ever need to return to old code) and your Team Lead.
 
+
+
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
+  - RD -> a set of formally described tables where data can be accessed for reassebled in different ways without having to reorgnize the datbase tables.
+  - SQL -> structured query language that is used to communicate with the database.
 
 - [ ] Why do tables need a `primary key`?
+  - Tables need a primary key so that each row/entry has a unique key so that they are easily identifiable. In addition is helps when working with multiple tables that are related so that information can be matched properly between them.
 
 - [ ] What is the name given to a table column that references the primary key on another table.
+  - Foreign Key
 
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+  - One parent/primary key in one table needs to refer to several child rows in another table. (ex: customers (table) can purchase multiple products (table) and products can be purchased by many customers).
+
+
 
 ## Minimum Viable Product
 
