@@ -14,23 +14,22 @@ module.exports = {
 
 // ✔
 function getProjects() {
-    return db('projects')
+    return db('newestProjects')
 };
 
 // ✔
 function getResources() {
-    return db('resources')
+    return db('newestResources')
 };
 
 // ✔
 function getTasks() {
-    return db('tasks')
+    return db('newestTasks')
 };
 
-
-// 
+// ✔
 function addProject(project) {
-    return db('projects')
+    return db('newestProjects')
     .insert(project, 'id')
     .then(ids => {
         const [id] = ids
@@ -38,19 +37,19 @@ function addProject(project) {
     })
 };
 
-// 
+// ✔
 function addResource(resource) {
-    return db('resources')
+    return db('newestResources')
     .insert(resource, 'id')
-    // .then(ids => {
-    //     const [id] = ids
-    //     return findByRId(id)
-    // })
+    .then(ids => {
+        const [id] = ids
+        return findByRId(id)
+    })
 };
 
-// 
+// ✔
 function addTask(task) {
-    return db('tasks')
+    return db('newestTasks')
     .insert(task, 'id')
     .then(ids => {
         const [id] = ids
@@ -58,23 +57,23 @@ function addTask(task) {
     })
 };
 
-// 
+// ✔
 function findByPId(id) {
-    return db('projects')
+    return db('newestProjects')
         .where({ id })
         .first()
 };
 
-// 
+// ✔
 function findByRId(id) {
-    return db('resources')
+    return db('newestResources')
         .where({ id })
         .first()
 };
 
-// 
+// ✔
 function findByTId(id) {
-    return db('tasks')
+    return db('newestTasks')
         .where({ id })
         .first()
 };
